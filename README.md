@@ -20,7 +20,7 @@ To create web scraping scripts using ChatGPT, follow these steps:
    - Document the steps needed to find and extract data.  
    - Right-click the desired page element → **Inspect** → **Copy > Copy selector** to get the HTML path.  
 
-   ![Copying a selector](https://brightdata.com/wp-content/uploads/2024/07/Copying-a-selector-1.png)
+   ![Copying a selector](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Copying-a-selector-1.png)
 
 2. **Generate Code with ChatGPT**  
    - Provide clear and detailed prompts specifying the scraping logic.
@@ -122,7 +122,7 @@ Next, the code retrieves the website content and stores it as a `BeautifulSoup` 
 
 Next, you need to save the code to a file named `books_scraping.py` and run the command `python3 books_scraping.py` from the command line. This code generates an Excel file named `books_scraped.xlsx` in the same directory as `books_scraping.py`:
 
-![The generated Excel file named books_scraped.xlsx](https://brightdata.com/wp-content/uploads/2024/07/The-generated-Excel-file-named-books_scraped.xlsx-1024x684.png)
+![The generated Excel file named books_scraped.xlsx](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/The-generated-Excel-file-named-books_scraped.xlsx-1024x684.png)
 
 Let's scrape another simple website, https://quotes.toscrape.com, which contains a collection of quotes.
 
@@ -217,7 +217,7 @@ print("Quotes have been saved to quotes.xlsx")
 
 Save this code to a file named `quotes_scraping.py` and run the command `python3 books_scraping.py` from the command line. This code generates an Excel file named `quotes_scraped.xlsx` in the same directory as `quotes_scraping.py`. Open the generated Excel file, and it should look like this:
 
-![Generated Excel file with quotes and authors](https://brightdata.com/wp-content/uploads/2024/07/Generated-Excel-file-with-quotes-and-authors-1024x226.png)
+![Generated Excel file with quotes and authors](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Generated-Excel-file-with-quotes-and-authors-1024x226.png)
 
 ## Scraping Complex Websites
 
@@ -231,19 +231,19 @@ Here is the workflow for scraping Yelp:
 
 1. Find the selector of the location text box that the script will use; in this case, it’s `#search_location`. Type “Stockholm” in the location search box and then find the search button selector; in this case, it is `#header_find_form > div.y-css-1iy1dwt > button`. Click the search button to see the search results. This may take a few seconds. Find a selector that contains the business name (_ie_ `#main-content > ul > li:nth-child(3) > div.container_\_09f24_\_FeTO6.hoverable_\_09f24_\__UXLO.y-css-way87j > div > div.y-css-cxcdjj > div:nth-child(1) > div.y-css-1iy1dwt > div:nth-child(1) > div > div > h3 > a`):  
 
-![Getting the selector for the business name](https://brightdata.com/wp-content/uploads/2024/07/Getting-the-selector-for-the-business-name.png)
+![Getting the selector for the business name](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Getting-the-selector-for-the-business-name.png)
 
 2. Find the selector that contains the rating for the business (_ie_ `#main-content > ul > li:nth-child(3) > div.container_\_09f24_\_FeTO6.hoverable_\_09f24_\__UXLO.y-css-way87j > div > div.y-css-cxcdjj > div:nth-child(1) > div.y-css-1iy1dwt > div:nth-child(2) > div > div > div > div.y-css-ohs7lg > span.y-css-jf9frv`):  
 
-![Getting the selector for the business average review](https://brightdata.com/wp-content/uploads/2024/07/Getting-the-selector-for-the-business-average-review.png)
+![Getting the selector for the business average review](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Getting-the-selector-for-the-business-average-review.png)
 
 3. Find the selector for the **Open Now** button; here, it’s `#main-content > div.stickyFilterOnSmallScreen_\_09f24_\_UWWJ3.hideFilterOnLargeScreen_\_09f24_\_ilqIP.y-css-9ze9ku > div > div > div > div > div > span > button:nth-child(3) > span`:  
     
-![Open Now button selector](https://brightdata.com/wp-content/uploads/2024/07/Open-Now-button-selector.png)
+![Open Now button selector](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Open-Now-button-selector.png)
     
 4. Save a copy of the web page so that you can upload it later, along with the ChatGPT prompt to help ChatGPT understand the context of the prompts. In Chrome, you can do that by clicking the three dots at the top right and then clicking **Save** and **Share > Save Page As**:  
     
-![Save web page in Chrome](https://brightdata.com/wp-content/uploads/2024/07/Save-web-page-in-Chrome.png)    
+![Save web page in Chrome](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Save-web-page-in-Chrome.png)    
 
 Next, using the selector values you extracted earlier, you need to draft a detailed prompt to guide ChatGPT in generating the scraping script:
 
@@ -336,7 +336,7 @@ finally:
 
 Save this script and run it with Python in an IDE like VS Code. You’ll notice that the code launches Chrome, navigates to Yelp, clears the location text box, enters “Stockholm”, clicks the search button, filters businesses that are open now, and then closes the page. After that, the scraping result is saved to the Excel file `stockholm_bussinsess.xlsx`:
 
-![Yelp business reviews in Excel](https://brightdata.com/wp-content/uploads/2024/07/Yelp-business-reviews-in-Excel.png)
+![Yelp business reviews in Excel](https://github.com/luminati-io/web-scraping-with-chatgpt/blob/main/images/Yelp-business-reviews-in-Excel.png)
 
 All the source code for this tutorial is available on [GitHub](https://github.com/smarter-code/article-chatgpt-webscraping/tree/main).
 
